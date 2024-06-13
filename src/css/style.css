@@ -64,6 +64,8 @@ nav {
   opacity : 0.8; 
   -webkit-backdrop-filter: blur( 4px );
   width: 60px;
+  border-radius: 30px;
+  overflow: hidden;
 }
 
 .nav-links ul {
