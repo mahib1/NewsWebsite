@@ -7,6 +7,10 @@ const PORT = 3000;
 const API_KEY = '8f61b51c0d9940809c05e1a88becc769';
 const URL = 'https://newsapi.org/v2/everything';
 
+// Serve static files from the 'public' directory
+app.use(express.static('public'));
+
+// CORS middleware
 app.use(cors());
 
 app.get('/news', async (req, res) => {
@@ -27,4 +31,3 @@ app.get('/news', async (req, res) => {
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
 });
-
