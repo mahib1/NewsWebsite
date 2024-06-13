@@ -11,7 +11,9 @@ const URL = 'https://newsapi.org/v2/everything';
 app.use(express.static('public'));
 
 // CORS middleware
-app.use(cors());
+app.use(cors({
+    origin: 'https://news-website-1-chi.vercel.app'
+}));
 
 app.get('/news', async (req, res) => {
     const query = req.query.q;
